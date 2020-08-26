@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+             Login
+            </title>
+             <link rel="icon" href="file:///C:/Users/u/Desktop/41HeL2cy9LL._AC_UL600_SR600,600_.jpg">   
+    
+        </title>
+        <style>
+           section{
+              
+               
+               
+               border-radius: 11px;
+               box-sizing: content-box;
+               border: 1px solid ;
+               margin: 40px 480px;
+               border-color: #f7f7f7;
+               width: 400px;
+               box-shadow:black;
+               
+               
+               float: left;
+               flex-shrink: 1;
+               flex-wrap: wrap;
+               flex-basis: 200px;
+           box-shadow: 0px 0px 5px .2px;
+           }
+           header{
+               background-color: #35268a;
+               text-align:center;
+               font-family:  Helvetica;
+               margin: -36px 0px 0px -1px;
+               width: 402.8px;
+               height: 80px;
+               border-top-left-radius: 10px;
+               border-top-right-radius: 10px;
+              
+           }
+           form{
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           }
+           a{
+               text-decoration: none;
+           }
+           button{
+
+               border: .5px solid blue;
+               background-color: lightblue;
+
+           }
+           button:hover{
+               border-color: grey;
+               background-color: darkgray;
+           }
+           input{
+               border:1.5px solid #f0f0f0;
+           border-radius: 5px;
+           }
+           #footer{
+            border: black solid .5px; 
+            width: 1347px; 
+            height: 285px;
+                
+            margin: -70px 0px -1000px -489px;  
+            background-color: #231860;   
+           text-align: center;
+           }
+
+
+          ul{
+              list-style-type: none;
+              margin: 20px 6px 0px 50px;
+              display: inline-block;
+              padding: 25px;
+              text-align: left;
+          }
+          li{
+              color: white;
+              display:block;
+              padding: 5px;
+              font-style:normal;
+            font-family: sans-serif;
+          }
+          p{
+              font-family: sans-serif;
+              padding: 15px;
+          }
+          section:hover{ 
+              box-shadow: 0px 0px 15px 0px #231860;
+          }
+        </style>
+</head>
+<body >
+            <section>
+                <header style="color: red; text-align: center;">
+                    
+                    <h3 style="text-align:left; color: white;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; padding: 15px 0px 0px 35px; font-size: 35px;">Create Account
+                    </h3>
+                 <h2>
+				 <?php 
+				 if(isset($_SESSION['success']) && $_SESSION['success'] !='')
+                {
+                    echo "Registration Successfull";
+                    unset($_SESSION['success']);
+                }
+				 if(isset($_SESSION['fail']) && $_SESSION['fail'] !='')
+                {
+                    echo "Registration Unsuccessfull";
+                    unset($_SESSION['fail']);
+                }
+				?>
+				</h2>
+                </header> 
+                  
+                <form method="POST" action="code.php" style="margin: 40px; color:#35268a;">
+                    <p>NAME:
+                        <br>
+                        <input type="email" name="name" required size="40" placeholder="FirstName LastName" style="height: 30px;">
+                    </p>
+                    <p>Enter the email:
+                        <br>
+                        <input type="email" name="email"  required size="40" placeholder="forexample@gmai.com" style="height: 30px;">
+                    </p>
+                    <p>Phone no:
+                        <br>
+                        <input type="text" name="number"  required size="40" placeholder="Phone Number" style="height: 30px;">
+                    </p>
+                    <p>City:
+                        <br>
+                        <input type="text" name="city" required size="40" placeholder="City" style="height: 30px;">
+                    </p>
+                    <p>College:
+                        <br>
+                        <input type="email" name="college" required size="40" placeholder="College" style="height: 30px;">
+                    </p>
+                    <p>
+                         Password:
+                       <br>
+                        <input type="password" name="password" maxlength="20" required size="40" placeholder="Password" style="height: 30px">
+                    </p>
+                    
+                
+                
+                    <br>
+                <span style="color: darkgray;">
+                   <a href="" style="color: darkgray;" >Already have an account</a>
+                </span>
+<br><br>
+                <div style="text-align: centre; margin-left: 0px;color: white  ;">
+                    <button type="button" name="registerbtn" style="text-align: centre; color: white;background-color: #35268a; border-radius: 5px;width: 320px; height: 40px; font-size: 120%;">
+                          Create Account
+                    </button>
+                </div>
+                
+
+
+
+
+                </form>
+                
+
+            </section>
+            <section>
+                    <div id="footer">
+                        <ul>
+                            
+                            <li><h4>Home<h4></li>
+                            <li>Internships</li>
+                            <li>About Us</li>
+                            <li>Contact Us</li>
+                            <li>Career</li>
+                        </ul>
+                        <ul>
+                        
+                            <li><h4>Social Media</h4></li>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>LinkedIn</li>
+                            
+                        </ul>
+                        
+                        <ul>
+                            
+                          <li>  <h4>Subscribe to our newsletter<h4> <li>
+                                <br>
+                            
+                            <li><input type="text" placeholder="name"></li>
+                            <li><input type="email" placeholder="email"></li>
+                            <li><button type="submit" style="width: 80px; height: 20px;"> submit</li>
+                            
+                        </ul>
+                        <ul id="partners">
+                            
+                            <li><h4>Partners<h4></li>
+                            <li >For enquiries relating to 
+
+                            </li>
+                            <li>Six interns, potential </li>
+                            <li>partnerships or other </li>
+                            <li>business related </li>
+                        </ul>
+                        <ul>
+                            
+                            <li><h4>Sixinterns Pvt. Ltd.<h4></li>
+                            <li>Jalandhar-Delhi G.T. Road</li>
+                            <li>Phagwara, Punjab </li>
+                            <li>144411</li>
+                            <li>Phone: 9110597711</li>
+                        </ul>
+                        </div>
+
+                  
+        
+            </section>
+            
+            
+        </body>
+
+</html>
